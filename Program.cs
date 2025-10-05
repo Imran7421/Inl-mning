@@ -5,10 +5,6 @@ using System.Security.Cryptography.X509Certificates;
 using System.Transactions;
 using Inlämning;
 
-    
-
-
-
 bool running = true; // Correct declaration
 User currentUser = null;  // Track logged-in user
     // storing all user inputs
