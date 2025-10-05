@@ -1,18 +1,20 @@
-using System.Reflection.Emit;
-
-namespace Inlämning;
-
-class User
+namespace Inlämning
 {
-    public string Email;
-
-    public string _password;
-
-    //Constructor
-
-    public User(string email, string password)
+    public class User
     {
-        Email = email;
-        _password = password;
+        public string Email;
+        public string _password;
+        public string Username;  // Added 'Username' field
+
+        // Constructor that accepts email, password, and username
+        public User(string email, string password, string username)
+        {
+            Email = email;
+            _password = password;
+            Username = username;  // Correctly initialize the Username field
+        }
+        public string GetUserEmail() => Email;
+    public string GetPassword() => _password;
+    public string GetUsername() => Username;
     }
 }

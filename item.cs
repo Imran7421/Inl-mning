@@ -2,7 +2,7 @@ using System.Reflection.Metadata;
 
 namespace Inlämning;
 
-class Item
+public class Item
 {
     public string Name;
 
@@ -11,11 +11,22 @@ class Item
     public string Owner;
 
 // constructor
-    public Item(string name, string description, string owner)
+   public Item(string name, string description, string owner)
     {
         Name = name;
         Description = description;
         Owner = owner;
     }
+
+    // Getter for Item Name
+    public string GetItemName() => Name;
+
+    // Getter for Item Description
+    public string GetItemDescription() => Description;
+
+    // Getter for Item Owner's Email
+    public string GetOwnerEmail() => Owner;
+﻿
+
 
 } 

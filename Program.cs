@@ -1,8 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Transactions;
 using Inlämning;
+
+    
+
 
 
 bool running = true; // Correct declaration
@@ -117,12 +121,15 @@ User currentUser = null;  // Track logged-in user
 }
       void UploadItem()
 {
-    Console.WriteLine("=== All Items ===");
-
-        foreach (Item item in items)
-        {
-            Console.WriteLine(item);
-        }
+    Console.WriteLine("Enter Item Name");
+    string name = Console.ReadLine();
+    Console.WriteLine("Enter item description");
+    string description = Console.ReadLine();
+    Console.WriteLine("Enter owner email");
+    string owner = Console.ReadLine();
+    Item itemToAdd = new Item(name, description, owner);
+    items.Add(itemToAdd);
+    Console.WriteLine("Item has been succesfully added!");
     }
 
     // View all items
